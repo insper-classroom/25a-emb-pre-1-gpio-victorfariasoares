@@ -23,16 +23,18 @@ int main() {
 
         if (!gpio_get(BTN_VERDE)) {
             sleep_ms(100);
-            printf("Botao verde: %d\n", cnt_verde++);
+            printf("Botao 1: %d\n", cnt_verde++);
             while(!gpio_get(BTN_VERDE)){
+                sleep_ms(10);
 
             }
         }
 
         if (!gpio_get(BTN_BLUE)) {
             sleep_ms(100);
-            printf("Botao azul: %d\n", cnt_blue++);
+            printf("Botao 2: %d\n", cnt_blue++);
             while(!gpio_get(BTN_BLUE)){
+                sleep_ms(10);
 
             }
         }
